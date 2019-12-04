@@ -14,7 +14,7 @@ taxWS = taxWB[taxWB.sheetnames[0]]
 
 # 이메일 사업자 번호를 키로 해쉬테이블
 emailAddress = dict()
-for i in range(2,emailWS.max_row):
+for i in range(2,emailWS.max_row+1):
     emailAddress[emailWS[i][0].value] = emailWS[i][1].value
     print(emailWS[i][0].value,emailAddress[emailWS[i][0].value])
 
@@ -28,7 +28,7 @@ for c in range (0,erpWS.max_column):
     print(erpWS[2][c].value,erpHash[erpWS[2][c].value])
 
 erpVal = []
-for i in range (3,erpWS.max_row):
+for i in range (3,erpWS.max_row+1):
     temp = []
     if erpWS[erpHash['사업자번호']+str(i)].value!=None and erpWS[erpHash['수금액']+str(i)].value!=None: #사업자명이나 수금액이 없다면 저장하지 않음
         for j in erpDic:
