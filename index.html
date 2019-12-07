@@ -3,8 +3,16 @@
         <meta charset="utf-8">
     </head>
     <body>
-      <form action="index.py" method="post">
-        <input type="text" name="origin_file">
-      </form>
+        <form action="http://localhost:5000/fileUpload" method="post" enctype="multipart/form-data">
+            <input type="file" name="erp_file">
+            <input type="form" name="title">
+            <input type="submit">
+        </form>
+
+        <form action="http://localhost:5000/fileUpload" method="post" enctype="multipart/form-data">
+            <input type="file" name="email_file">
+            <input type="form" name="title">
+            <input type="submit">
+        </form>
     </body>
 </html>
